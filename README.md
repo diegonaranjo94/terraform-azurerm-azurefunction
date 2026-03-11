@@ -52,7 +52,7 @@ Next features to be included in the module will be:
 
 ## Author
 
-Originally created by [Amin Espinoza](http://github.com/aminepsinoza).
+Originally created by [Amin Espinoza](http://github.com/aminepsinoza10).
 
 ## License
 
