@@ -17,11 +17,16 @@ resource "azurerm_app_service_plan" "service_plan" {
   }
 }
 
-resource "azurerm_function_app" "azure_function" {
+resource "azurerm_linux_function_app" "azure_function" {
   name                       = var.function_name
   location                   = var.rg_location
   resource_group_name        = var.rg_name
-  app_service_plan_id        = azurerm_app_service_plan.service_plan.id
+
+  service_plan_id            = azurerm_app_service_plan.service_plan.id
   storage_account_name       = azurerm_storage_account.storage.name
   storage_account_access_key = azurerm_storage_account.storage.primary_access_key
+
+  site_config {
+    
+  }
 }
