@@ -30,16 +30,10 @@ variable "app_service_name" {
   description = "Name of the App Service Plan"
 }
 
-variable "app_service_plan_sku_tier" {
+variable "app_service_plan_sku_name" {
   type        = string
-  description = "SKU tier of the App Service Plan"
-  default     = "Standard"
-}
-
-variable "app_service_plan_sku_size" {
-  type        = string
-  description = "SKU size of the App Service Plan"
-  default     = "S1"
+  description = "SKU name of the App Service Plan (e.g. Y1 for Consumption, EP1 for Premium, S1 for Standard)"
+  default     = "Y1"
 }
 
 variable "function_name" {
