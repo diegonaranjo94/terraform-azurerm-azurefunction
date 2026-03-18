@@ -23,7 +23,13 @@ resource "azurerm_linux_function_app" "azure_function" {
   storage_account_name       = azurerm_storage_account.storage.name
   storage_account_access_key = azurerm_storage_account.storage.primary_access_key
 
+  app_settings = {
+    "FUNCTIONS_WORKER_RUNTIME" = "python"
+  }
+
   site_config {
-    
+    application_stack {
+      python_version = "3.11"
+    }
   }
 }
